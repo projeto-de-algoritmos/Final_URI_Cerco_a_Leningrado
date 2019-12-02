@@ -9,7 +9,11 @@ int dist[MAX];
 int w[MAX];
 vector<int> adj[MAX];
 bitset<MAX> processed;
-
+/*
+	Foi utlizado o dijkstra onde foram priorizadas as estradas(arestas) que levam o atirador a gastar menos balas(k). 
+	Por fim, a probabilidade foi calculada a partir da quantidade de inimigos existentes no caminho que leva o soldado 
+	a gastar o menor número de balas(k) possível.
+*/
 int dijkstra(int s,int dest ,int k,int N){
  	for (int i = 1; i <= N; ++i)
  		dist[i] = oo;
